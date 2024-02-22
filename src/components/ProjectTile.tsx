@@ -1,10 +1,21 @@
 import React from 'react'
 
-type Props = {}
+type Props = {
+  name: string,
+  description: string,
+  liveLink: string,
+  gitHubLink: string,
+  images: string[]
+}
 
-const ProjectTile = (props: Props) => {
+const ProjectTile = ({name, description, liveLink, gitHubLink, images}: Props) => {
   return (
-    <div>ProjectTile</div>
+    <div>
+      <h3>{name}</h3>
+      <div>
+
+      </div>
+    </div>
   )
 }
 

@@ -3,15 +3,15 @@ import { AtSymbolIcon } from "@heroicons/react/24/solid"
 
 const Home = () => {
   return (
-    <section id="home" className='flex flex-col justify-center p-[5rem] bg-background h-screen'>
+    <section id="home" className='flex flex-col justify-center p-8 md:p-16 bg-background h-screen'>
       <div className='flex flex-col justify-center max-w-5xl mx-auto text-primary-dark '>
-        <p className='text-lg py-2'>
+        <p className='text-lg py-2 font-light font-mono'>
           Hey there, my name is
         </p>
-        <h1 className='text-5xl py-2 font-extrabold underline underline-offset-4'>
+        <h1 className='text-7xl py-4 font-extrabold tracking-tight underline underline-offset-4'>
           Tomasz Jackowski
         </h1>
-        <h2 className='text-2xl py-2 mb-4'>
+        <h2 className='text-4xl py-4 mb-4 font-light'>
           I am a Web Developer
           <TypewriterComponent
             options={{

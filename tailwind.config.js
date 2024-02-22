@@ -37,7 +37,8 @@ export default {
         darkBg: "linear-gradient(to top, rgb(36, 36, 36), rgb(36, 36, 45))",
       },
       fontFamily: {
-        "roboto": ["roboto", "sans-serif"]
+        "roboto": ["roboto", "sans-serif"],
+        "mono": ["IBM Plex Mono", "ui-monospace"]
       }
     },
   },

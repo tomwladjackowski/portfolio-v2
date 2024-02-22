@@ -3,6 +3,8 @@ import useMediaQuery from '../hooks/useMediaQuery'
 import Logo from "../assets/logo.png"
 import NavLink from '../components/NavLink'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid'
+import { MdOutlineFileDownload } from "react-icons/md";
+
 
 
 const NavBar = () => {
@@ -10,7 +12,7 @@ const NavBar = () => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1024px)")
   return (
     <nav id='navbar'>
-      <div className='bg-background drop-shadow flex items-center justify-between fixed top-0 z-30 w-full py-2'>
+      <div className='bg-background bg-opacity-75 backdrop-filter backdrop-blur-sm flex items-center justify-between fixed top-0 z-30 w-full py-2'>
         <div className='flex items-center justify-between mx-auto w-5/6'>
           <div className='flex items-center justify-between w-full gap-16'>
             <img alt='logo' src={Logo} className='w-16 h-16'/>
@@ -33,6 +35,12 @@ const NavBar = () => {
                     href="/contact"
                     name="Contact"
                   />
+                  <button
+                    className='flex items-center rounded-md border-2 border-primary-light shadow-[4px_4px_5px_2px_rgba(0,0,0,0.3)] p-2 text-md font-light text-primary-dark'
+                  >
+                    <MdOutlineFileDownload className='h-6 w-6 pr-2 shrink-0'/>
+                    Get my resume
+                  </button>
                 </div>
               </div>
             ) : (
