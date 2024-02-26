@@ -27,27 +27,31 @@ const NavBar = () => {
   return (
     <nav id='navbar'>
       <div className='bg-background bg-opacity-75 backdrop-filter backdrop-blur-sm flex items-center justify-between fixed top-0 z-30 w-full py-2'>
-        <div className='flex items-center justify-between mx-auto w-5/6'>
+        <div className='flex items-center justify-between md:mx-auto w-full px-4 md:w-5/6'>
           <div className='flex items-center justify-between w-full gap-16'>
             <img alt='logo' src={Logo} className='w-16 h-16'/>
             {isAboveMediumScreens ? (
               <div className='flex items-center justify-between w-full'>
                 <div className='flex items-center justify-between gap-8 text-xl mx-auto'>
                   <NavLink 
-                    href="/"
+                    href="home"
                     name="Home"
+                    offset={0}
                   />
                   <NavLink
-                    href="/about"
+                    href="about"
                     name="About"
+                    offset={-80}
                   />
                   <NavLink
-                    href="/projects"
+                    href="projects"
                     name="Projects"
+                    offset={-80}
                   />
                   <NavLink
-                    href="/contact"
+                    href="contact"
                     name="Contact"
+                    offset={-80}
                   />
                   <button
                     className='flex items-center rounded-md border-2 border-primary-light shadow-[4px_4px_5px_2px_rgba(0,0,0,0.3)] p-2 text-md font-light text-primary-dark'
@@ -80,23 +84,36 @@ const NavBar = () => {
               />
             </button>
           </div>
-          <div className='ml-[33%] flex flex-col gap-10 text-2xl'>
+          <div className='flex flex-col justify-center items-center gap-10 text-2xl'>
             <NavLink 
-              href="/"
+              href="home"
               name="Home"
+              offset={0}
             />
             <NavLink
-              href="/about"
+              href="about"
               name="About"
+              offset={-80}
             />
             <NavLink
-              href="/projects"
+              href="projects"
               name="Projects"
+              offset={-80}
             />
             <NavLink
-              href="/contact"
+              href="contact"
               name="Contact"
+              offset={-80}
             />
+          </div>
+          <div className='flex justify-center items-center mt-12'>
+            <button
+              className='flex items-center rounded-md border-2 border-primary-light shadow-[4px_4px_5px_2px_rgba(0,0,0,0.3)] p-2 text-md font-light text-primary-dark'
+              onClick={handleDownloadClick}
+            >
+              <MdOutlineFileDownload className='h-6 w-6 pr-2 shrink-0'/>
+              Get my resume
+            </button>
           </div>
         </div>
       )}

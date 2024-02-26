@@ -7,7 +7,7 @@ const ProjectTile = ({name, description, liveLink, gitHubLink, images, tags}: Pr
   return (
     <div className="">
       <h3 className="text-2xl text-primary-dark py-8">{name}</h3>
-      <div className="flex flex-col gap-4 md:flex-row">
+      <div className="flex flex-col gap-4 md:flex-row md:justify-between">
         <div className="bg-primary-content rounded-lg self-start">
           <div className="font-light p-4">
             <p>{description}</p>

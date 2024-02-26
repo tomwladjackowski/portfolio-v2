@@ -9,8 +9,8 @@ const Contact = () => {
     <section id="contact" className="bg-background">
       <div className="lg:w-3/4 mx-auto">
         <h1 className="p-12 text-5xl font-bold text-primary-dark">Contact me:</h1>
-        <div className="w-full flex justify-center gap-16 text-2xl font-light">
-          <p className="py-16">
+        <div className="w-full flex justify-center gap-16 text-2xl font-light px-4">
+          <p className="pb-8 md:py-16">
             Nice to still have you here!.<br></br>
             I am right now looking for my first Web Developer position. <br></br>
             If you would be interested please feel free to reach out to me.

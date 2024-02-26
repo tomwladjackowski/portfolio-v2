@@ -7,7 +7,7 @@ const Home = () => {
     window.location.href = "mailto:marianne.helbig@googlemail.com";
   }
   return (
-    <section id="home" className='flex flex-col justify-center p-8 md:p-16 bg-background h-screen'>
+    <section id="home" className='flex flex-col justify-center p-4 md:p-16 bg-background h-screen'>
       <div className='flex flex-col justify-center max-w-5xl mx-auto text-primary-dark '>
         <p className='text-lg py-2 font-light font-mono'>
           Hey there, my name is
