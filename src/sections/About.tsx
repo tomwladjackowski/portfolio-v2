@@ -9,7 +9,7 @@ import { TbBrandCypress } from "react-icons/tb";
 const About = () => {
   const iconStyling = "h-12 w-12 shrink-0 text-primary-dark"
   return (
-    <section id="about" className="bg-background md:h-full">
+    <section id="about" className="bg-background pb-24">
       <div className="lg:w-3/4 mx-auto">
         <h1 className="p-12 text-5xl font-bold text-primary-dark">About:</h1>
         <div className="flex flex-col gap-16 justify-center w-full md:m-4 p-4 md:flex-row">

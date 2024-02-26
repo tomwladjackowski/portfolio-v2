@@ -4,7 +4,8 @@ export interface ProjectType {
   liveLink?: string,
   gitHubLink: string,
   images: {
-    desktop: string,
-    mobile: string
-  }
+    desktop?: string,
+    mobile?: string
+  },
+  tags: string[]
 }

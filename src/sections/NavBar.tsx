@@ -10,6 +10,20 @@ import { MdOutlineFileDownload } from "react-icons/md";
 const NavBar = () => {
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false)
   const isAboveMediumScreens = useMediaQuery("(min-width: 1024px)")
+
+  const handleDownloadClick = () => {
+    fetch("TomaszJackowskiCV.pdf").then((response) => {
+      response.blob().then((blob) => {
+        // Creating new object of PDF fileå
+        const fileURL = window.URL.createObjectURL(blob);
+        // Setting various property values
+        const alink = document.createElement("a");
+        alink.href = fileURL;
+        alink.download = "TomaszJackowskiCV.pdf";
+        alink.click();
+      });
+    });
+  }
   return (
     <nav id='navbar'>
       <div className='bg-background bg-opacity-75 backdrop-filter backdrop-blur-sm flex items-center justify-between fixed top-0 z-30 w-full py-2'>
@@ -37,6 +51,7 @@ const NavBar = () => {
                   />
                   <button
                     className='flex items-center rounded-md border-2 border-primary-light shadow-[4px_4px_5px_2px_rgba(0,0,0,0.3)] p-2 text-md font-light text-primary-dark'
+                    onClick={handleDownloadClick}
                   >
                     <MdOutlineFileDownload className='h-6 w-6 pr-2 shrink-0'/>
                     Get my resume

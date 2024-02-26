@@ -1,45 +1,30 @@
-import { useState } from "react"
+import { AtSymbolIcon } from "@heroicons/react/24/solid"
+
 const Contact = () => {
-  const [result, setResult] = useState("");
-
-  const onSubmit = async (event: React.SyntheticEvent) => {
-    event.preventDefault();
-    setResult("Sending....");
-    const form = document.getElementById("form");
-    const formData = new FormData(form as HTMLFormElement);
-
-    formData.append("access_key", import.meta.env.VITE_WEB3_ACCESS_KEY);
-
-    const res = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData
-    }).then((res) => res.json());
-
-    if (res.success) {
-      console.log("Success", res);
-      setResult(res.message);
-      setTimeout(() => {
-        setResult("")
-      }, 5000);
-    } else {
-      console.log("Error", res);
-      setResult(res.message);
-      setTimeout(() => {
-        setResult("")
-      }, 5000);
-    }
-  };
+  function handleEmailClick(e:React.SyntheticEvent) {
+    e.preventDefault();
+    window.location.href = "mailto:tomwladjackowskki@gmail.com";
+  }
   return (
-    <section id="contact" className="bg-background md:h-full">
+    <section id="contact" className="bg-background">
       <div className="lg:w-3/4 mx-auto">
         <h1 className="p-12 text-5xl font-bold text-primary-dark">Contact me:</h1>
-        <form className="flex flex-col gap-2 w-full bg-transparent" onSubmit={onSubmit}>
-        <input className="bg-transparent p-2 border-b-2 placeholder-darkText focus:outline-none" id='name' type="text" name="name" placeholder='Name' required/>
-        <input className="bg-transparent p-2 border-b-2 placeholder-darkText focus:outline-none" id='email' type="email" name="email" placeholder='Your e-mail address' required/>
-        <textarea className="bg-transparent p-2 border-b-2 placeholder-darkText focus:outline-none" id='message' name="message" placeholder='Type in your message' required></textarea>
-        <button className="p-2 mt-2 rounded-lg w-1/4 mx-auto text-lightText" id='submit-button' type="submit">Submit</button>
-      </form>
-      <span>{result}</span>
+        <div className="w-full flex justify-center gap-16 text-2xl font-light">
+          <p className="py-16">
+            Nice to still have you here!.<br></br>
+            I am right now looking for my first Web Developer position. <br></br>
+            If you would be interested please feel free to reach out to me.
+          </p>
+        </div>
+        <div className="flex justify-center pb-24">
+          <button 
+            className="flex items-center gap-2 bg-primary text-lg text-secondary-content rounded-md py-3 px-6"
+            onClick={handleEmailClick}
+          >
+            <p className="font-light">Get in touch with me</p>
+            <AtSymbolIcon className="h-5 w-5 text-secondary-content"/>
+          </button>
+        </div>
       </div>
     </section>
   )

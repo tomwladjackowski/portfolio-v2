@@ -2,6 +2,10 @@ import TypewriterComponent from "typewriter-effect"
 import { AtSymbolIcon } from "@heroicons/react/24/solid"
 
 const Home = () => {
+  const handleEmailClick= (e:React.SyntheticEvent) => {
+    e.preventDefault();
+    window.location.href = "mailto:marianne.helbig@googlemail.com";
+  }
   return (
     <section id="home" className='flex flex-col justify-center p-8 md:p-16 bg-background h-screen'>
       <div className='flex flex-col justify-center max-w-5xl mx-auto text-primary-dark '>
@@ -25,7 +29,10 @@ const Home = () => {
           />
         </h2>
         <div className="md:mx-auto">
-          <button className="flex items-center gap-2 bg-primary text-lg text-secondary-content rounded-md py-3 px-6">
+          <button 
+            className="flex items-center gap-2 bg-primary text-lg text-secondary-content rounded-md py-3 px-6"
+            onClick={handleEmailClick}
+          >
             <p className="font-light">Get in touch with me</p>
             <AtSymbolIcon className="h-5 w-5 text-secondary-content"/>
           </button>
