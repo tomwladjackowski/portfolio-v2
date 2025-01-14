@@ -20,7 +20,9 @@ const ProjectTile = ({name, description, liveLink, gitHubLink, images, tags}: Pr
             </div>
             {liveLink ? (
               <button>
-                <LuExternalLink className="h-8 w-8 text-primary-dark"/>
+                <a href={liveLink} target="_blank" rel="noopener noreferrer">
+                  <LuExternalLink className="h-8 w-8 text-primary-dark"/>
+                </a>
               </button>
             ): null}
             <button className="">

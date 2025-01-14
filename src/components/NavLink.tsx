@@ -13,6 +13,7 @@ const Navlink = ({href, name, offset}: Props) => {
       spy={true}
       smooth={true}
       offset={offset}
+      className='cursor-pointer'
     >
       {name}
     </Link>
